@@ -1,0 +1,14 @@
+{
+  "name": "Amaze GO! — Ok Bulmacası",
+  "short_name": "Amaze GO!",
+  "description": "Beyaz okları doğru sırayla dokunarak tahtayı temizle",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a11",
+  "theme_color": "#08080d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
