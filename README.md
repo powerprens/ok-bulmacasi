@@ -1,5 +1,8 @@
 # Amaze GO! — Tangled / Unblock Bulmacası 🐛
 
+**▶ Çevrimiçi oyna:** <https://powerprens.github.io/ok-bulmacasi/> (GitHub Pages — telefondan "Ana ekrana ekle" ile uygulama gibi kurulur, çevrimdışı çalışır)
+**📦 APK:** [Releases → AmazeGO.apk](https://github.com/powerprens/ok-bulmacasi/releases/download/v1.0/AmazeGO.apk) (Android 7.0+)
+
 [Amaze GO!](https://play.google.com/store/apps/details?id=com.oakever.arrows) oyununun birebir tarayıcı klonu. Google Gemini Pro ile hazırlanan spesifikasyona ve videodaki (yüksek fps ile doğrulanmış) gerçek oynanışa göre yazıldı. Harici kütüphane yok — saf HTML5 Canvas + JavaScript + WebAudio, yalnızca ızgara dizisi matematiği.
 
 ## Oynanış ("trafik sıkışıklığı" tarzı sıra bulmacası)
@@ -24,7 +27,7 @@
 node serve.js        # http://localhost:8080
 ```
 
-Ya da `index.html`'e çift tıkla. **Geliştirici kısayolu:** `#9` → 9. seviye.
+Ya da `index.html`'e çift tıkla. **Geliştirici kısayolu:** `#9` → 9. seviye. Yayındaki sürüm: <https://powerprens.github.io/ok-bulmacasi/> — push sonrası ~1 dakikada güncellenir.
 
 ## Telefonda oynama
 
