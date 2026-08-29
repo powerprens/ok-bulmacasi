@@ -37,5 +37,10 @@
   </div>
 
   <script src="game.js"></script>
+  <script id="sw-reg">
+    // https üzerinde service worker (çevrimdışı + kurulum); file:/// ve http'de yok sayılır
+    if (location.protocol === "https:" && "serviceWorker" in navigator)
+      navigator.serviceWorker.register("sw.js").catch(() => {});
+  </script>
 </body>
 </html>

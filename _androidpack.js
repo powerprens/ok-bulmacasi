@@ -97,11 +97,12 @@ fs.mkdirSync(ASSETS, { recursive: true });
 for (const f of ["index.html", "game.js", "style.css"])
   fs.copyFileSync(path.join(ROOT, f), path.join(ASSETS, f));
 
-// APK içi kopyada PWA satırları gereksiz (file:// içinde manifest çalışmaz)
+// APK içi kopyada PWA/service worker satırları gereksiz (file:// içinde çalışmaz)
 const idx = path.join(ASSETS, "index.html");
 let html = fs.readFileSync(idx, "utf8");
 html = html.replace(/\s*<link rel="manifest"[^>]*>/, "")
            .replace(/\s*<link rel="apple-touch-icon"[^>]*>/, "")
-           .replace(/\s*<meta name="apple-mobile-web-app[^>]*>/g, "");
+           .replace(/\s*<meta name="apple-mobile-web-app[^>]*>/g, "")
+           .replace(/\s*<script id="sw-reg">[\s\S]*?<\/script>/, "");
 fs.writeFileSync(idx, html);
 console.log("assets hazır: index.html, game.js, style.css");
