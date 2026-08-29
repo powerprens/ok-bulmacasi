@@ -1,10 +1,10 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg1: #08080d;
-  --bg2: #12121c;
-  --board: #0a0a11;
-  --text: #e2e8f0;
+  --bg1: #f7f2ea;
+  --bg2: #ece5d8;
+  --board: #f8f4ed;
+  --text: #2f2a23;
 }
 
 html, body {
@@ -47,17 +47,17 @@ header {
 .hdr-side.right { justify-content: flex-end; }
 
 #levelPill {
-  background: #eef2f8;
-  color: #1c263f;
+  background: #ffffff;
+  color: #4b3a2a;
   font-weight: 900;
   font-size: 18px;
   letter-spacing: 2px;
   padding: 9px 30px;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  box-shadow: 0 4px 14px rgba(75, 58, 42, .22);
 }
 
-#levelPill span { color: #3b4a75; }
+#levelPill span { color: #8a6f52; }
 
 #lives { margin-left: 14px; letter-spacing: 4px; font-size: 15px; }
 
@@ -72,15 +72,15 @@ header {
   width: 36px; height: 36px;
   border-radius: 50%;
   border: none;
-  background: rgba(255,255,255,0.10);
-  color: #c4cde4;
+  background: rgba(47, 42, 35, .08);
+  color: #6b6153;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   transition: background .15s, transform .1s;
 }
 
-.icon-btn:hover { background: rgba(255,255,255,0.2); }
+.icon-btn:hover { background: rgba(47, 42, 35, .16); }
 .icon-btn:active { transform: scale(.9); }
 
 /* ---------- Oyun alanı ---------- */
@@ -97,14 +97,14 @@ canvas {
   border-radius: 26px;
   touch-action: none;
   cursor: pointer;
-  box-shadow: 0 16px 44px rgba(0,0,0,.5);
+  box-shadow: 0 16px 44px rgba(75, 58, 42, .28);
 }
 
 /* ---------- Alt bilgi ---------- */
 footer {
   text-align: center;
   font-size: 12.5px;
-  color: #8b98bb;
+  color: #8a8172;
   padding-top: 10px;
 }
 

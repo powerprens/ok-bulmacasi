@@ -22,7 +22,7 @@ class MainActivity : ComponentActivity() {
             useWideViewPort = true
             loadWithOverviewMode = true
         }
-        web.setBackgroundColor(0xFF08080D.toInt())
+        web.setBackgroundColor(0xFFF8F4ED.toInt())
         web.webViewClient = WebViewClient()
         web.webChromeClient = WebChromeClient()
         setContentView(web)

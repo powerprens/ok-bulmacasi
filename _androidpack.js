@@ -74,7 +74,7 @@ const arrow = (px, py, k) => {
   const head = inTri(x, y, 0.80, 0.50, 0.50, 0.28, 0.50, 0.72);
   return head || tail;
 };
-const WHITE = [238, 241, 246, 1], BG = [8, 8, 13, 1], TRANS = [0, 0, 0, 0];
+const ARROW = [75, 58, 42, 1], BG = [248, 244, 237, 1], TRANS = [0, 0, 0, 0];   // koyu ok + krem zemin
 
 /* ---- mipmap ikonları ---- */
 const DENSITIES = [
@@ -84,11 +84,11 @@ const DENSITIES = [
 for (const [dir, legacy, fg] of DENSITIES) {
   const d = path.join(RES, dir);
   fs.mkdirSync(d, { recursive: true });
-  // klasik ikon (Android < 8): dolgun kare + ok
-  fs.writeFileSync(path.join(d, "ic_launcher.png"), png(legacy, (x, y) => arrow(x, y, 1) ? WHITE : BG));
-  fs.writeFileSync(path.join(d, "ic_launcher_round.png"), png(legacy, (x, y) => arrow(x, y, 1) ? WHITE : BG));
+  // klasik ikon (Android < 8): krem kare + koyu ok
+  fs.writeFileSync(path.join(d, "ic_launcher.png"), png(legacy, (x, y) => arrow(x, y, 1) ? ARROW : BG));
+  fs.writeFileSync(path.join(d, "ic_launcher_round.png"), png(legacy, (x, y) => arrow(x, y, 1) ? ARROW : BG));
   // uyarlanabilir ön plan: şeffaf zemin + merkezde küçük ok (güvenli bölge)
-  fs.writeFileSync(path.join(d, "ic_launcher_foreground.png"), png(fg, (x, y) => arrow(x, y, 0.52) ? WHITE : TRANS));
+  fs.writeFileSync(path.join(d, "ic_launcher_foreground.png"), png(fg, (x, y) => arrow(x, y, 0.52) ? ARROW : TRANS));
 }
 console.log("ikonlar üretildi (5 yoğunluk, klasik + uyarlanabilir)");
 

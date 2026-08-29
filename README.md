@@ -7,7 +7,7 @@
 
 ## Oynanış ("trafik sıkışıklığı" tarzı sıra bulmacası)
 
-- Tahtada birbirine dolanmış, hareketsiz **renkli kurtlar** (segment zincirleri) var. Kafalarındaki beyaz ok uçları çıkış yönlerini gösterir.
+- Tahtada birbirine dolanmış, hareketsiz **kahverengi kurtlar** (segment zincirleri) var. Kafalarındaki krem ok uçları çıkış yönlerini gösterir.
 - Bir kurda **dokun**: kafasından tahta kenarına giden **çıkış yolu (escapePath)** başka bir kurt tarafından kapatılmamışsa, kurt o yoldan **solup tahtadan çıkar** (tick tabanlı akıcı animasyon).
 - Yolu kapalıysa kurt **reddeder**: titrer, hata sesi çalar, bir **kalp** gider.
 - **Yanma hakkı 3**: üçüncü hatalı dokunuşta bölüm sona erer (💔) ve seviye yeniden başlar.
@@ -56,7 +56,7 @@ Telefona kurulum: `http://<pc-ip>:8080/AmazeGO.apk` adresinden indir (sunucu aç
 
 | Dosya | Açıklama |
 |---|---|
-| `index.html` / `style.css` | Arayüz: LEVEL tableti, koyu tema, kazanma paneli, yıldızlar |
+| `index.html` / `style.css` | Arayüz: LEVEL tableti, açık krem tema, kazanma paneli, yıldızlar |
 | `game.js` | Tamamı: üretici, kural motoru, animasyon, çizim, ses |
 | `serve.js` | Bağımlılıksız statik sunucu |
 | `test-unblock.js` | 150 seviye: biçim + determinizm + çözülebilirlik + animasyon + Gemini örneği |

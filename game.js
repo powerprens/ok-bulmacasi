@@ -66,7 +66,7 @@ function vibrate(pattern) {
 const DIR_VEC = { up: [0, -1], right: [1, 0], down: [0, 1], left: [-1, 0] };
 const DIR_ANGLE = { right: 0, down: Math.PI / 2, left: Math.PI, up: -Math.PI / 2 };
 const DIRS = ["up", "right", "down", "left"];
-const WORM_COLORS = ["#eef1f6"];                 // tek renk: beyaz kurtlar (siyah tahta üstünde)
+const WORM_COLORS = ["#4b3a2a"];                 // tek renk: espresso kahve oklar (krem tahta üstünde)
 
 /* ---------------- Ses motoru ---------------- */
 
@@ -471,8 +471,8 @@ function frame(now) {
 function drawPanel(S) {
   roundRectPath(ctx, 0, 0, S, S, S * 0.055);
   const pg = ctx.createLinearGradient(0, 0, 0, S);
-  pg.addColorStop(0, "#191922");                   // siyah zarif zemin
-  pg.addColorStop(1, "#0a0a11");
+  pg.addColorStop(0, "#f8f4ed");                   // açık krem zemin
+  pg.addColorStop(1, "#eee7db");
   ctx.fillStyle = pg;
   ctx.fill();
 }
@@ -498,11 +498,11 @@ function drawWorm(w, cell, alpha, shakeX) {
       }
       ctx.stroke();
     };
-    drawChain(cell * 0.62, shade(w.color, -48));   // koyu dış hat
-    drawChain(cell * 0.46, w.color);                // ana renk
-    drawChain(cell * 0.18, shade(w.color, 30));     // üst parlama
+    drawChain(cell * 0.64, shade(w.color, -42));   // koyu dış hat
+    drawChain(cell * 0.48, w.color);                // ana renk
+    drawChain(cell * 0.16, shade(w.color, 26));     // üst parlama
 
-    // kafa: çıkış yönünü gösteren ok ucu (beyaz gövde üstünde koyu uç + beyaz kontur)
+    // kafa: çıkış yönünü gösteren ok ucu (koyu gövde üstünde krem uç + koyu kontur)
     const h = w.segments[0];
     const hp = cellPx(h.x, h.y);
     const dir = w.escapePath[0];
@@ -510,12 +510,12 @@ function drawWorm(w, cell, alpha, shakeX) {
     ctx.save();
     ctx.translate(hp.px + dx, hp.py + dy);
     ctx.rotate(angle);
-    ctx.fillStyle = "#10101a";
-    ctx.strokeStyle = "rgba(255,255,255,.9)";
-    ctx.lineWidth = Math.max(1, cell * 0.05);
-    ctx.shadowColor = "rgba(0,0,0,.5)";
-    ctx.shadowBlur = cell * 0.1;
-    const s = cell * 0.34;
+    ctx.fillStyle = "#f8f4ed";
+    ctx.strokeStyle = "rgba(75,58,42,.9)";
+    ctx.lineWidth = Math.max(1, cell * 0.055);
+    ctx.shadowColor = "rgba(75,58,42,.3)";
+    ctx.shadowBlur = cell * 0.08;
+    const s = cell * 0.4;
     ctx.beginPath();
     ctx.moveTo(s, 0);
     ctx.lineTo(-s * 0.45, -s * 0.62);
@@ -660,7 +660,7 @@ function showHelpOverlay() {
     <div class="big-emoji">🐛</div>
     <h2>Nasıl Oynanır?</h2>
     <div class="rules">
-      <div>🐛 Tahtada birbirine dolanmış <b>beyaz kurtlar</b> var; kafalarındaki koyu ok uçları çıkış yönlerini gösterir.</div>
+      <div>🐛 Tahtada birbirine dolanmış <b>kahverengi kurtlar</b> var; kafalarındaki krem ok uçları çıkış yönlerini gösterir.</div>
       <div>👉 Bir kurda <b>dokun</b>: kafasından kenara giden yol <b>boşsa</b> kurt solup tahtadan çıkar.</div>
       <div>⛔ Yolu başka bir kurt <b>kapatıyorsa</b> reddedip titrer — önce o kurdu çıkarmalısın.</div>
       <div>💔 <b>3 hatalı dokunuş</b> hakkın var; üçüncüde bölüm sona erer ve baştan başlarsın.</div>

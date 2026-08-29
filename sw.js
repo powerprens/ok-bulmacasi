@@ -1,5 +1,5 @@
 // Service worker: oyunu çevrimdışı oynanabilir yapar (cache-first)
-const CACHE = "amaze-go-v1";
+const CACHE = "amaze-go-v2";
 const FILES = [
   "./", "./index.html", "./game.js", "./style.css",
   "./manifest.json", "./icon-192.png", "./icon-512.png",

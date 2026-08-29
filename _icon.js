@@ -66,7 +66,7 @@ const inTri = (px, py, ax, ay, bx, by, cx, cy) => {
 const draw = (px, py) => {
   const tail = px >= 0.20 && px <= 0.50 && py >= 0.42 && py <= 0.58;
   const head = inTri(px, py, 0.80, 0.50, 0.50, 0.28, 0.50, 0.72);
-  return head || tail ? [238, 241, 246, 1] : [16, 16, 24, 1];
+  return head || tail ? [75, 58, 42, 1] : [248, 244, 237, 1];   // koyu kahve ok + krem zemin
 };
 
 fs.writeFileSync(__dirname + "/icon-192.png", png(192, draw));
